@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 		
 		@RequestMapping("/getdata")
 		public String showData()
-		{
+		{ 
 			return "welcome to the Project";
 			
 		}
