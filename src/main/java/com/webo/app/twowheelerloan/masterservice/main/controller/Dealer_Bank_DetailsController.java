@@ -22,20 +22,20 @@ public class Dealer_Bank_DetailsController {
 	@Autowired
 	ServiceImplForDealerBankDetails s ;
 	
-	@PostMapping(value = "/adddealerbankData")
+	@PostMapping(value = "/dealerbank")
 	public void addData(@RequestBody Dealer_Bank_Details DealerBankDetails) {
 		s.insertDealerBankDetails(DealerBankDetails);;
 		
 	}
 	
-	@GetMapping(value = "/getdealerbankData")
+	@GetMapping(value = "/dealerbank")
 	public List<Dealer_Bank_Details> getData(){
 		List<Dealer_Bank_Details> list = s.readDealerBankDetails();
 		
 		return list;
 	}
 	
-	@GetMapping(value = "/getdealerbankDatabyId/{id}")
+	@GetMapping(value = "/dealerbank/{id}")
 	public Optional<Dealer_Bank_Details> getDatabyId(@PathVariable("id") int id) {
 		Optional<Dealer_Bank_Details> city=s.getDealerBankDetailsDatabyId(id);
 		return city;
@@ -47,7 +47,7 @@ public class Dealer_Bank_DetailsController {
 		
 	}
 	
-	@DeleteMapping(value = "/deletedealerData/{id}")
+	@DeleteMapping(value = "/dealerbank/{id}")
 	public void delete(@PathVariable("id") int id) {
 		
 		s.deleteDealerBankDetails(id);
