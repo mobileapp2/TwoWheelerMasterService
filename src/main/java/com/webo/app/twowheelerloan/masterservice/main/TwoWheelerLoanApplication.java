@@ -7,11 +7,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
-@EnableEurekaClient
+//@EnableEurekaClient
 @SpringBootApplication
-@ComponentScan("com.webo.app.twowheelerloan.masterservice")
-@EntityScan
 @EnableJpaRepositories
 public class TwoWheelerLoanApplication {
 
