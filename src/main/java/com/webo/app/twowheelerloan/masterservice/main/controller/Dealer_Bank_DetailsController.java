@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.ServiceImplForDealerBankDetails;
-import com.webo.app.twowheelerloan.masterservice.main.model.Dealer_Bank_Details;
-
+import com.webo.app.twowheelerloan.masterservice.main.model.DealerBankDetails;
 @RestController
 @CrossOrigin("*")
 public class Dealer_Bank_DetailsController {
@@ -23,25 +22,25 @@ public class Dealer_Bank_DetailsController {
 	ServiceImplForDealerBankDetails s ;
 	
 	@PostMapping(value = "/dealerbank")
-	public void addData(@RequestBody Dealer_Bank_Details DealerBankDetails) {
+	public void addData(@RequestBody DealerBankDetails DealerBankDetails) {
 		s.insertDealerBankDetails(DealerBankDetails);;
 		
 	}
 	
 	@GetMapping(value = "/dealerbank")
-	public List<Dealer_Bank_Details> getData(){
-		List<Dealer_Bank_Details> list = s.readDealerBankDetails();
+	public List<DealerBankDetails> getData(){
+		List<DealerBankDetails> list = s.readDealerBankDetails();
 		
 		return list;
 	}
 	
 	@GetMapping(value = "/dealerbank/{id}")
-	public Optional<Dealer_Bank_Details> getDatabyId(@PathVariable("id") int id) {
-		Optional<Dealer_Bank_Details> city=s.getDealerBankDetailsDatabyId(id);
+	public Optional<DealerBankDetails> getDatabyId(@PathVariable("id") int id) {
+		Optional<DealerBankDetails> city=s.getDealerBankDetailsDatabyId(id);
 		return city;
 	}
 	
-	public void updateData(@RequestBody Dealer_Bank_Details Dealer_Bank_Details) {
+	public void updateData(@RequestBody DealerBankDetails Dealer_Bank_Details) {
 		
 		s.updateDealerBankDetails(Dealer_Bank_Details);
 		

@@ -1,12 +1,17 @@
 package com.webo.app.twowheelerloan.masterservice.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class BranchDetails {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer branchId;
 	private String branchName;
 	private String branchType;
@@ -14,7 +19,11 @@ public class BranchDetails {
 	private String branchMICR_Code;
 	private String branchContactNo;
 	private String branchEmailId;
-	private String branchAddress;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private BranchAddressDetails branchAddress;
+	
+	
 	public Integer getBranchId() {
 		return branchId;
 	}
@@ -57,10 +66,10 @@ public class BranchDetails {
 	public void setBranchEmailId(String branchEmailId) {
 		this.branchEmailId = branchEmailId;
 	}
-	public String getBranchAddress() {
+	public BranchAddressDetails getBranchAddress() {
 		return branchAddress;
 	}
-	public void setBranchAddress(String branchAddress) {
+	public void setBranchAddress(BranchAddressDetails branchAddress) {
 		this.branchAddress = branchAddress;
 	}
 	

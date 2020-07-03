@@ -14,18 +14,22 @@ public class EmployeeDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer employeeId;
 	private String employeeFullName;
+	
 	@OneToOne(cascade = CascadeType.ALL)
-	// private EmployeeAddress employeeAddress;
-	private long employeeMobileNo;
-	private long employeeAlternateMobileNo;
+	private EmployeeAddressDetails employeeAddress;
+	
+	private String employeeMobileNo;
+	private String employeeAlternateMobileNo;
 	private String employeeEmail;
 	private String employeeGender;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	private Role employeeRole;
 	private String employeeBranch;
 	private String employeeDateOfBirth;
+	
 	@OneToOne(cascade = CascadeType.ALL)
-	// private EmployeeDocument employeeDocument;
+	private EmployeeDocumentDetails employeeDocument;
 	
 	public Integer getEmployeeId() {
 		return employeeId;
@@ -43,24 +47,19 @@ public class EmployeeDetails {
 		this.employeeFullName = employeeFullName;
 	}
 
-	/*
-	 * public EmployeeAddress getEmployeeAddress() { return employeeAddress; }
-	 * public void setEmployeeAddress(EmployeeAddress employeeAddress) {
-	 * this.employeeAddress = employeeAddress; }
-	 */
-	public long getEmployeeMobileNo() {
+	public String getEmployeeMobileNo() {
 		return employeeMobileNo;
 	}
 
-	public void setEmployeeMobileNo(long employeeMobileNo) {
+	public void setEmployeeMobileNo(String employeeMobileNo) {
 		this.employeeMobileNo = employeeMobileNo;
 	}
 
-	public long getEmployeeAlternateMobileNo() {
+	public String getEmployeeAlternateMobileNo() {
 		return employeeAlternateMobileNo;
 	}
 
-	public void setEmployeeAlternateMobileNo(long employeeAlternateMobileNo) {
+	public void setEmployeeAlternateMobileNo(String employeeAlternateMobileNo) {
 		this.employeeAlternateMobileNo = employeeAlternateMobileNo;
 	}
 
@@ -103,10 +102,24 @@ public class EmployeeDetails {
 	public void setEmployeeDateOfBirth(String employeeDateOfBirth) {
 		this.employeeDateOfBirth = employeeDateOfBirth;
 	}
-	/*
-	 * public EmployeeDocument getEmployeeDocument() { return employeeDocument; }
-	 * public void setEmployeeDocument(EmployeeDocument employeeDocument) {
-	 * this.employeeDocument = employeeDocument; }
-	 */
 
+	public EmployeeAddressDetails getEmployeeAddress() {
+		return employeeAddress;
+	}
+
+	public void setEmployeeAddress(EmployeeAddressDetails employeeAddress) {
+		this.employeeAddress = employeeAddress;
+	}
+
+	public EmployeeDocumentDetails getEmployeeDocument() {
+		return employeeDocument;
+	}
+
+	public void setEmployeeDocument(EmployeeDocumentDetails employeeDocument) {
+		this.employeeDocument = employeeDocument;
+	}
+	
+
+	
+	
 }

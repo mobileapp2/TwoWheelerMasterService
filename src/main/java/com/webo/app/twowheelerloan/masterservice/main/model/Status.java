@@ -9,9 +9,7 @@ import javax.persistence.Id;
 public class Status {
 	
 	@Id
-	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	private Integer status_Id;
 	private String statusName;
 	private int statusCode;

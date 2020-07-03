@@ -2,6 +2,8 @@ package com.webo.app.twowheelerloan.masterservice.main.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
@@ -9,13 +11,16 @@ import javax.persistence.OneToOne;
 public class Customer_Bank_Details {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer customerBankDetailId;
 	private String customerBankAccountNo;
 	private String customerBankAccountHolderName;
-	private String customerBankBranchDetails;
 	
-//	@OneToOne(cascade = CascadeType.ALL)
-//	private Status status;
+	@OneToOne(cascade = CascadeType.ALL)
+	private BranchDetails customerBankBranchDetails;
+	
+	private int status;
+	
 	public Integer getCustomerBankDetailId() {
 		return customerBankDetailId;
 	}
@@ -34,18 +39,19 @@ public class Customer_Bank_Details {
 	public void setCustomerBankAccountHolderName(String customerBankAccountHolderName) {
 		this.customerBankAccountHolderName = customerBankAccountHolderName;
 	}
-	public String getCustomerBankBranchDetails() {
+	public BranchDetails getCustomerBankBranchDetails() {
 		return customerBankBranchDetails;
 	}
-	public void setCustomerBankBranchDetails(String customerBankBranchDetails) {
+	public void setCustomerBankBranchDetails(BranchDetails customerBankBranchDetails) {
 		this.customerBankBranchDetails = customerBankBranchDetails;
 	}
-//	public Status getStatus() {
-//		return status;
-//	}
-//	public void setStatus(Status status) {
-//		this.status = status;
-//	}
-//	
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	
 	
 }
