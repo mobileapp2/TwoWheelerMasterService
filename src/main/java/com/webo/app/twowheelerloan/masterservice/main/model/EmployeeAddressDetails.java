@@ -8,15 +8,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Emp_Addr_Table")
-
 public class EmployeeAddressDetails {
-	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
 	private Integer empAddId;
-	
 	private String empHouseNo;
 	private String empStreetName;
 	private String empArea;

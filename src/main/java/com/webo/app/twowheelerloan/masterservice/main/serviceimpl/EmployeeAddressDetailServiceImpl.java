@@ -23,32 +23,26 @@ public class EmployeeAddressDetailServiceImpl implements EmployeeAddressDetailsS
 
 	@Override
 	public void insertEmployeeAddressDetails(EmployeeAddressDetails empaddetail) {
-		
 		repo.save(empaddetail);
 	}
 
 	@Override
 	public List<EmployeeAddressDetails> getEmployeeAddressDetails() {
-		
 		return repo.findAll();
 	}
 
 	@Override
-	public EmployeeAddressDetails getEmployeeAddressDetailsDatabyId(int empAddId) {
-		
+	public EmployeeAddressDetails getEmployeeAddressDetailsDatabyId(int empAddId) {	
 		return repo.findById(empAddId).get();
 	}
 
 	@Override
 	public void updategetEmployeeAddressDetails(EmployeeAddressDetails empaddetail ) {
-
 		repo.save(empaddetail);
-		List<EmployeeAddressDetails> empadd=repo.findAll();
 	}
 
 	@Override
 	public void deleteEmployeeAddressDetails(int empAddId) {
-
 		repo.deleteById(empAddId);
 	}
 
