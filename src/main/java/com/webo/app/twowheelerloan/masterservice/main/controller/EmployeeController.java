@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeDetails;
-import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceInter;
 
 @RestController
