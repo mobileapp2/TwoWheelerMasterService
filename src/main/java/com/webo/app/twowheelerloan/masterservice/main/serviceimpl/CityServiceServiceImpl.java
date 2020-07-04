@@ -6,13 +6,12 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.webo.app.twowheelerloan.masterservice.main.model.City;
 import com.webo.app.twowheelerloan.masterservice.main.repository.CityRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.CityServiceI;
 
 @Service
-@Transactional
+//@Transactional
 public class CityServiceServiceImpl implements CityServiceI {
 
 	@Autowired

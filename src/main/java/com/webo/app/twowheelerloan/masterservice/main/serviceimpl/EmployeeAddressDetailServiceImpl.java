@@ -16,7 +16,7 @@ import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDet
 
 
 @Service
-@Transactional
+//@Transactional
 public class EmployeeAddressDetailServiceImpl implements EmployeeAddressDetailsServiceI{
 
 	@Autowired EmployeeAddressDetailsRepo repo;

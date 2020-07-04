@@ -14,7 +14,8 @@ import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.CountryService
 
 @RestController
 public class CountryContoller {
-	@Autowired CountryServiceImpl countryServiceImpl;
+	@Autowired 
+	private CountryServiceImpl countryServiceImpl;
 
 	@RequestMapping(value="/country", method=RequestMethod.POST)
 	public void addCountry(@RequestBody Country country){
@@ -31,7 +32,7 @@ public class CountryContoller {
 		return countryServiceImpl.getCountryById(id);
 	}
 
-	@RequestMapping(value="/country/{id}",method=RequestMethod.POST)
+	@RequestMapping(value="/country/{id}",method=RequestMethod.DELETE)
 	public void deleteCountry(@PathVariable Integer id){
 		countryServiceImpl.deleteCountry(id);
 	}

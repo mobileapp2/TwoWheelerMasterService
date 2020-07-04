@@ -17,7 +17,7 @@ import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceI;
 public class EmployeeController
 {
 	@Autowired
-	EmployeeServiceI employeeServiceInter;
+	private EmployeeServiceI employeeServiceInter;
 	
 	@RequestMapping(value = "/employeeDetail",method = RequestMethod.POST)
 	public void addData(@RequestBody EmployeeDetails employeeDetails)

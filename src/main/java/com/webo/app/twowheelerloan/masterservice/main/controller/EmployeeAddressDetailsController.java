@@ -2,8 +2,6 @@ package com.webo.app.twowheelerloan.masterservice.main.controller;
 
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeAddressDetails;
 import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsServiceI;
 
@@ -21,37 +18,40 @@ import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDet
 @RestController
 public class EmployeeAddressDetailsController {
 
-	@Autowired EmployeeAddressDetailsServiceI EmpAddService;
-		@PostMapping(value = "/employeeaddresses")
-	public void insertEmployeeAddressDetails(@RequestBody EmployeeAddressDetails DealerBankDetails) {
-	EmpAddService.insertEmployeeAddressDetails(DealerBankDetails);
+	@Autowired 
+	private EmployeeAddressDetailsServiceI empAddService;
+	
+	
+	@PostMapping(value = "/employeeaddress")
+	public void insertEmployeeAddressDetails(@RequestBody EmployeeAddressDetails employeeAddressDetails) {
+	empAddService.insertEmployeeAddressDetails(employeeAddressDetails);
 
 	}
 
 	@GetMapping(value = "/employeeaddress")
 	public List<EmployeeAddressDetails> getEmployeeAddressDetails(){
-	List<EmployeeAddressDetails> list = EmpAddService.getEmployeeAddressDetails();
+	List<EmployeeAddressDetails> list = empAddService.getEmployeeAddressDetails();
 
 	return list;
 	}
 
-	@GetMapping(value = "/employeeaddress/{empAddId}")
-	public EmployeeAddressDetails getEmployeeAddressDetailsDatabyId(@PathVariable("empAddId") int id) {
-	EmployeeAddressDetails empdata=EmpAddService.getEmployeeAddressDetailsDatabyId(id);
+	@GetMapping(value = "/employeeaddress/{id}")
+	public EmployeeAddressDetails getEmployeeAddressDetailsDatabyId(@PathVariable("id") int id) {
+	EmployeeAddressDetails empdata=empAddService.getEmployeeAddressDetailsDatabyId(id);
 	return empdata;
 	}
 	
-@PutMapping(value = "/employeeaddress/{empAddId}")
-	public void updategetEmployeeAddressDetails(@RequestBody EmployeeAddressDetails Dealer_Bank_Details) {
+	@PutMapping(value = "/employeeaddress")
+	public void updategetEmployeeAddressDetails(@RequestBody EmployeeAddressDetails employeeAddressDetails) {
 
-	EmpAddService.updategetEmployeeAddressDetails(Dealer_Bank_Details);
+	empAddService.updategetEmployeeAddressDetails(employeeAddressDetails);
 
 	}
 
-	@DeleteMapping(value = "/employeeaddress/{empAddId}")
-	public void deleteEmployeeAddressDetails(@PathVariable("empAddId") int id) {
+	@DeleteMapping(value = "/employeeaddress/{id}")
+	public void deleteEmployeeAddressDetails(@PathVariable("id") int id) {
 
-		EmpAddService.deleteEmployeeAddressDetails(id);
+		empAddService.deleteEmployeeAddressDetails(id);
 	}
 
 	

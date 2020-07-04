@@ -16,44 +16,35 @@ import com.webo.app.twowheelerloan.masterservice.main.service.TenureServiceI;
 
 @RestController
 public class TenureController {
-	
-	@Autowired TenureServiceI ts;
-	
-	@PostMapping(value = "/addtenuredata")
-	public void adddata (@RequestBody Tenure tenure)
-	{
-		ts.insertTenureData(tenure);
-		
-	}
-	
-   @GetMapping(value = "/gettenuredata")
-	
-	public List<Tenure> getData(){
-		
-		 List<Tenure> list = ts.readtenuredata();
-		  
-		 return list;
-		
-	}
-   
-   @GetMapping(value = "/gettenuredatabyid/{id}")
-	public Tenure getsinagaldata(@PathVariable int id) {
-		
-		return ts.getdatabyid(id);
-		
-	}
-   
-   @DeleteMapping(value = "/deletetenuredata/{id}")
-	public void delete(@PathVariable int id)
-	{
-		ts.deletetenuredata(id);
+
+	@Autowired
+	TenureServiceI tenureServiceI;
+
+	@PostMapping(value = "/tenure")
+	public void adddata(@RequestBody Tenure tenure) {
+		tenureServiceI.insertTenureData(tenure);
 	}
 
-   @PutMapping(value = "/updatetenuredata")
-   public void updatetenuredata(@RequestBody Tenure tenure)
-   {
-	ts.updatetenuredata(tenure);
-	   
-   }
+	@GetMapping(value = "/tenure")
+	public List<Tenure> getData() {
+		List<Tenure> list = tenureServiceI.readtenuredata();
+		return list;
+	}
+
+	@GetMapping(value = "/tenure/{id}")
+	public Tenure getsinagaldata(@PathVariable int id) {
+
+		return tenureServiceI.getdatabyid(id);
+	}
+
+	@DeleteMapping(value = "/tenure/{id}")
+	public void delete(@PathVariable int id) {
+		tenureServiceI.deletetenuredata(id);
+	}
+
+	@PutMapping(value = "/tenure")
+	public void updatetenuredata(@RequestBody Tenure tenure) {
+		tenureServiceI.updatetenuredata(tenure);
+	}
 
 }

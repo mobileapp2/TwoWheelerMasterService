@@ -12,32 +12,32 @@ import com.webo.app.twowheelerloan.masterservice.main.service.BranchDetailsServi
 public class BranchDetailsServiceImpl implements BranchDetailsServiceI {
 
 	@Autowired
-	BranchDetailsRepo repo;
+	BranchDetailsRepo branchDetailsRepo;
 
 	public void insertBranchDetails(BranchDetails BranchDetails) {
 
-		repo.save(BranchDetails);
+		branchDetailsRepo.save(BranchDetails);
 	}
 
 	public Optional<BranchDetails> getBranchDetailsDatabyId(int id) {
 
-		return repo.findById(id);
+		return branchDetailsRepo.findById(id);
 	}
 
 	public List<BranchDetails> readBranchDetails() {
 
-		return repo.findAll();
+		return branchDetailsRepo.findAll();
 	}
 
 	public void updateBranchDetails(BranchDetails BranchDetails) {
 
-		repo.save(BranchDetails);
+		branchDetailsRepo.save(BranchDetails);
 
 	}
 
 	public void deleteBranchDetails(int id) {
 
-		repo.deleteById(id);
+		branchDetailsRepo.deleteById(id);
 	}
 
 }

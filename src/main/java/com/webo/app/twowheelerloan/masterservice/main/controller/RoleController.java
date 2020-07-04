@@ -20,7 +20,7 @@ public class RoleController
 {
 
 	@Autowired
-	RoleServiceI roleServiceInter;
+	private RoleServiceI roleServiceInter;
 	
 	@RequestMapping(value = "/role", method = RequestMethod.POST)
 	public void addData(@RequestBody Role role)
