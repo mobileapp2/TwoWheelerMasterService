@@ -1,9 +1,11 @@
 package com.webo.app.twowheelerloan.masterservice.main.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class State {
@@ -12,7 +14,9 @@ public class State {
 	private Integer id;	
 	private String stateName;
 	private int StateCode;
-	private String stateCountry;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Country stateCountry;
 	
 	public Integer getId() {
 		return id;
@@ -32,10 +36,10 @@ public class State {
 	public void setStateCode(int stateCode) {
 		StateCode = stateCode;
 	}
-	public String getStateCountry() {
+	public Country getStateCountry() {
 		return stateCountry;
 	}
-	public void setStateCountry(String stateCountry) {
+	public void setStateCountry(Country stateCountry) {
 		this.stateCountry = stateCountry;
 	}
 	

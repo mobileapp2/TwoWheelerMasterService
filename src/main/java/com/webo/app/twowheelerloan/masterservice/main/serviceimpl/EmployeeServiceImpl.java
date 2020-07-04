@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeDetails;
 import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceInter;
+import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceI;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeServiceInter
+public class EmployeeServiceImpl implements EmployeeServiceI
 {
 
 	@Autowired

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.webo.app.twowheelerloan.masterservice.main.model.EnquiryDetails;
 
 @Repository
-public interface EnquiryDetailsRepository extends JpaRepository<EnquiryDetails, Integer> {
+public interface EnquiryDetailsRepo extends JpaRepository<EnquiryDetails, Integer> {
 
 }

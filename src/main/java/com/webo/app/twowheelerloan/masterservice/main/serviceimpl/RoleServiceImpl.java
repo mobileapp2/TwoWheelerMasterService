@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Role;
 import com.webo.app.twowheelerloan.masterservice.main.repository.RoleRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.RoleServiceInter;
+import com.webo.app.twowheelerloan.masterservice.main.service.RoleServiceI;
 
 @Service
-public class RoleServiceImpl implements RoleServiceInter
+public class RoleServiceImpl implements RoleServiceI
 {
 
 	@Autowired

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Tenure;
 
-public interface TenureService {
+public interface TenureServiceI {
 	
 	public void insertTenureData(Tenure tenure);
 	

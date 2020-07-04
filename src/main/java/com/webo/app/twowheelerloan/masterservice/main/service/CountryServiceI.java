@@ -6,7 +6,7 @@ import com.webo.app.twowheelerloan.masterservice.main.model.Country;
 
 
 
-public interface CountryService {
+public interface CountryServiceI {
 
 	public void addCountry(Country country);
 

@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Role;
 
-public interface RoleServiceInter 
+public interface RoleServiceI 
 {
 
 	public Role enterData(Role role);

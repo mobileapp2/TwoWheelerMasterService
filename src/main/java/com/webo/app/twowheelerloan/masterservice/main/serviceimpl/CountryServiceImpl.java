@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Country;
 import com.webo.app.twowheelerloan.masterservice.main.repository.CountryRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.CountryService;
+import com.webo.app.twowheelerloan.masterservice.main.service.CountryServiceI;
 
 @Service
-public class CountryServiceImpl implements CountryService {
+public class CountryServiceImpl implements CountryServiceI {
 	@Autowired CountryRepo countryRepo;
 
 	@Override

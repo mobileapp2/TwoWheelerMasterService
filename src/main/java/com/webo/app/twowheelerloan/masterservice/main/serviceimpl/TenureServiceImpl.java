@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Tenure;
 import com.webo.app.twowheelerloan.masterservice.main.repository.TenureRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.TenureService;
+import com.webo.app.twowheelerloan.masterservice.main.service.TenureServiceI;
 
 @Service
-public class TenureServiceImpl implements TenureService{
+public class TenureServiceImpl implements TenureServiceI{
 	
 	@Autowired TenureRepo tr;
 

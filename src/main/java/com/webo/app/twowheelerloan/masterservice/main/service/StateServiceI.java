@@ -5,7 +5,7 @@ import java.util.List;
 import com.webo.app.twowheelerloan.masterservice.main.model.Country;
 import com.webo.app.twowheelerloan.masterservice.main.model.State;
 
-public interface StateService {
+public interface StateServiceI {
 
 	public void addState(State state);
 

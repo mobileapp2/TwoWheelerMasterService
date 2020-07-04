@@ -2,7 +2,6 @@ package com.webo.app.twowheelerloan.masterservice.main.controller;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,52 +10,49 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.webo.app.twowheelerloan.masterservice.main.model.BranchAddressDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsI;
-import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.BranchAddressDetailsImpl;
+import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsServiceI;
 
 @RestController
-@CrossOrigin("")
+@CrossOrigin("*")
 public class BranchAddressDetailsController {
-	@Autowired
-	BranchAddressDetailsImpl bi;
 	
-	@PostMapping(value = "/branchaddress")
+	@Autowired
+	private BranchAddressDetailsServiceI branchaddressDetailsServiceImpl;
+	
+	@PostMapping(value = "/branchaddressDetails")
 	public void addData(@RequestBody BranchAddressDetails branchaddressDetails)
 	{
-		bi.insertBranchAddressDetails(branchaddressDetails);
+		branchaddressDetailsServiceImpl.insertBranchAddressDetails(branchaddressDetails);
 	}
 	
-	@GetMapping(value = "/getbranchaddressDetailsData")
+	@GetMapping(value = "/branchaddressDetails")
 	public List<BranchAddressDetails> getData()
 	{
-	 List<BranchAddressDetails> list=bi.readBranchAddressDetails();
+	 List<BranchAddressDetails> list=branchaddressDetailsServiceImpl.readBranchAddressDetails();
 	return list;
 	}
 	
 	
-	@GetMapping(value = "/getbranchaddressDetailsDataby/{id}")
+	@GetMapping(value = "/branchaddressDetails/{id}")
 	public Optional<BranchAddressDetails> getDatabyId(@PathVariable("id") int id)
 	{
-		Optional<BranchAddressDetails> branchaddressDetails=bi.getbranchAddressDetailsDatabyId(id);
+		Optional<BranchAddressDetails> branchaddressDetails=branchaddressDetailsServiceImpl.getbranchAddressDetailsDatabyId(id);
 		return  branchaddressDetails;
 		
 	}
 	
-	@PutMapping(value = "/updatebranchaddressDetailsData")
+	@PutMapping(value = "/branchaddressDetails")
 	public void updateData(@RequestBody BranchAddressDetails   branchaddressDetails )
 	{
-		bi.updatebranchAddressDetails( branchaddressDetails);
+		branchaddressDetailsServiceImpl.updatebranchAddressDetails( branchaddressDetails);
 	}
 	
-    @DeleteMapping(value = "deletebranchaddressdetailsData/{id}")
+    @DeleteMapping(value = "/branchaddressDetails/{id}")
     public void delete(@PathVariable("id")int id)
 	{
-    	bi.deletebranchAddressDetails(id);
-}
+    	branchaddressDetailsServiceImpl.deletebranchAddressDetails(id);
+    }
 	
 }

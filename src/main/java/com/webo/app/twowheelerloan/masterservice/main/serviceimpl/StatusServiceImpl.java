@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Status;
 import com.webo.app.twowheelerloan.masterservice.main.repository.StatusRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.StatusService;
+import com.webo.app.twowheelerloan.masterservice.main.service.StatusServiceI;
 
 @Service
-public class StatusServiceImpl implements StatusService {
+public class StatusServiceImpl implements StatusServiceI {
 	
 	@Autowired StatusRepo sr;
 
