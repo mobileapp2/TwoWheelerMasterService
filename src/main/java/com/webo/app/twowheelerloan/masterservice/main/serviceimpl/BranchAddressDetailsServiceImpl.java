@@ -8,53 +8,36 @@ import com.webo.app.twowheelerloan.masterservice.main.model.BranchAddressDetails
 import com.webo.app.twowheelerloan.masterservice.main.repository.BranchAddressDetailsRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsServiceI;
 
-
 @Service
 public class BranchAddressDetailsServiceImpl implements BranchAddressDetailsServiceI {
+
 	@Autowired
-	
 	BranchAddressDetailsRepo branchAddressDetailsRepo;
 
 	@Override
 	public void insertBranchAddressDetails(BranchAddressDetails branchaddressDetails) {
 		branchAddressDetailsRepo.save(branchaddressDetails);
-		
+
 	}
 
 	public List<BranchAddressDetails> readBranchAddressDetails() {
-		
+
 		return branchAddressDetailsRepo.findAll();
 	}
 
 	public Optional<BranchAddressDetails> getbranchAddressDetailsDatabyId(int id) {
-		
+
 		return branchAddressDetailsRepo.findById(id);
 	}
 
-
 	public void updatebranchAddressDetails(BranchAddressDetails branchaddressDetails) {
 		branchAddressDetailsRepo.save(branchaddressDetails);
-		
+
 	}
 
 	public void deletebranchAddressDetails(int id) {
-		
+
 		branchAddressDetailsRepo.deleteById(id);
 	}
 
-	
-		
-	}
-	
-
-	
-		
-	
-
-	
-		
-		
-	
-
-	
-
+}

@@ -17,42 +17,37 @@ import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetai
 @RestController
 @CrossOrigin("*")
 public class BranchAddressDetailsController {
-	
+
 	@Autowired
 	private BranchAddressDetailsServiceI branchaddressDetailsServiceImpl;
-	
+
 	@PostMapping(value = "/branchaddressDetails")
-	public void addData(@RequestBody BranchAddressDetails branchaddressDetails)
-	{
+	public void addData(@RequestBody BranchAddressDetails branchaddressDetails) {
 		branchaddressDetailsServiceImpl.insertBranchAddressDetails(branchaddressDetails);
 	}
-	
+
 	@GetMapping(value = "/branchaddressDetails")
-	public List<BranchAddressDetails> getData()
-	{
-	 List<BranchAddressDetails> list=branchaddressDetailsServiceImpl.readBranchAddressDetails();
-	return list;
+	public List<BranchAddressDetails> getData() {
+		List<BranchAddressDetails> list = branchaddressDetailsServiceImpl.readBranchAddressDetails();
+		return list;
 	}
-	
-	
+
 	@GetMapping(value = "/branchaddressDetails/{id}")
-	public Optional<BranchAddressDetails> getDatabyId(@PathVariable("id") int id)
-	{
-		Optional<BranchAddressDetails> branchaddressDetails=branchaddressDetailsServiceImpl.getbranchAddressDetailsDatabyId(id);
-		return  branchaddressDetails;
-		
+	public Optional<BranchAddressDetails> getDatabyId(@PathVariable("id") int id) {
+		Optional<BranchAddressDetails> branchaddressDetails = branchaddressDetailsServiceImpl
+				.getbranchAddressDetailsDatabyId(id);
+		return branchaddressDetails;
+
 	}
-	
+
 	@PutMapping(value = "/branchaddressDetails")
-	public void updateData(@RequestBody BranchAddressDetails   branchaddressDetails )
-	{
-		branchaddressDetailsServiceImpl.updatebranchAddressDetails( branchaddressDetails);
+	public void updateData(@RequestBody BranchAddressDetails branchaddressDetails) {
+		branchaddressDetailsServiceImpl.updatebranchAddressDetails(branchaddressDetails);
 	}
-	
-    @DeleteMapping(value = "/branchaddressDetails/{id}")
-    public void delete(@PathVariable("id")int id)
-	{
-    	branchaddressDetailsServiceImpl.deletebranchAddressDetails(id);
-    }
-	
+
+	@DeleteMapping(value = "/branchaddressDetails/{id}")
+	public void delete(@PathVariable("id") int id) {
+		branchaddressDetailsServiceImpl.deletebranchAddressDetails(id);
+	}
+
 }

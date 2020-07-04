@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.webo.app.twowheelerloan.masterservice.main.controller.EmployeeAddressDetailsController;
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeAddressDetails;
 import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeAddressDetailsRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsServiceI;

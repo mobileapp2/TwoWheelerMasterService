@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class BranchDetails {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer branchId;
@@ -19,59 +19,72 @@ public class BranchDetails {
 	private String branchMICR_Code;
 	private String branchContactNo;
 	private String branchEmailId;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	private BranchAddressDetails branchAddress;
-	
-	
+
 	public Integer getBranchId() {
 		return branchId;
 	}
+
 	public void setBranchId(Integer branchId) {
 		this.branchId = branchId;
 	}
+
 	public String getBranchName() {
 		return branchName;
 	}
+
 	public void setBranchName(String branchName) {
 		this.branchName = branchName;
 	}
+
 	public String getBranchType() {
 		return branchType;
 	}
+
 	public void setBranchType(String branchType) {
 		this.branchType = branchType;
 	}
+
 	public String getBranchIFSC_Code() {
 		return branchIFSC_Code;
 	}
+
 	public void setBranchIFSC_Code(String branchIFSC_Code) {
 		this.branchIFSC_Code = branchIFSC_Code;
 	}
+
 	public String getBranchMICR_Code() {
 		return branchMICR_Code;
 	}
+
 	public void setBranchMICR_Code(String branchMICR_Code) {
 		this.branchMICR_Code = branchMICR_Code;
 	}
+
 	public String getBranchContactNo() {
 		return branchContactNo;
 	}
+
 	public void setBranchContactNo(String branchContactNo) {
 		this.branchContactNo = branchContactNo;
 	}
+
 	public String getBranchEmailId() {
 		return branchEmailId;
 	}
+
 	public void setBranchEmailId(String branchEmailId) {
 		this.branchEmailId = branchEmailId;
 	}
+
 	public BranchAddressDetails getBranchAddress() {
 		return branchAddress;
 	}
+
 	public void setBranchAddress(BranchAddressDetails branchAddress) {
 		this.branchAddress = branchAddress;
 	}
-	
-	
+
 }

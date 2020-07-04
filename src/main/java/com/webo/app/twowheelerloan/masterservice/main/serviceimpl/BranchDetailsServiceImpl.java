@@ -15,28 +15,22 @@ public class BranchDetailsServiceImpl implements BranchDetailsServiceI {
 	BranchDetailsRepo branchDetailsRepo;
 
 	public void insertBranchDetails(BranchDetails BranchDetails) {
-
 		branchDetailsRepo.save(BranchDetails);
 	}
 
 	public Optional<BranchDetails> getBranchDetailsDatabyId(int id) {
-
 		return branchDetailsRepo.findById(id);
 	}
 
 	public List<BranchDetails> readBranchDetails() {
-
 		return branchDetailsRepo.findAll();
 	}
 
 	public void updateBranchDetails(BranchDetails BranchDetails) {
-
 		branchDetailsRepo.save(BranchDetails);
-
 	}
 
 	public void deleteBranchDetails(int id) {
-
 		branchDetailsRepo.deleteById(id);
 	}
 
