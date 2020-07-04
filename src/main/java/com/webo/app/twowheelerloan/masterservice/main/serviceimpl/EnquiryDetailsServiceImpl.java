@@ -4,10 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.webo.app.twowheelerloan.masterservice.main.model.EnquiryDetails;
 import com.webo.app.twowheelerloan.masterservice.main.repository.EnquiryDetailsRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.EnquiryDetailsServiceI;
 
+@Service
 public class EnquiryDetailsServiceImpl implements EnquiryDetailsServiceI {
 
 	@Autowired
