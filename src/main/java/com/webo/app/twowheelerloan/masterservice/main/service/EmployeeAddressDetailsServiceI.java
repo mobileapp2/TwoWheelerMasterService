@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeAddressDetails;
 
 @Service
-public interface EmployeeAddressDetailsService {
+public interface EmployeeAddressDetailsServiceI {
 
 	void insertEmployeeAddressDetails(EmployeeAddressDetails dealerBankDetails);
 

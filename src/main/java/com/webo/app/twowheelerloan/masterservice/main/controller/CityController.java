@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.webo.app.twowheelerloan.masterservice.main.model.City;
-import com.webo.app.twowheelerloan.masterservice.main.service.CityService;
+import com.webo.app.twowheelerloan.masterservice.main.service.CityServiceI;
 
 @RestController
 public class CityController {
 
 	@Autowired
-	CityService cityService;
+	private CityServiceI cityService;
 
 	@PostMapping(value = "/city")
 	public void insertCityData(@RequestBody City city) {
@@ -28,18 +28,18 @@ public class CityController {
 		return cityService.getCityData();
 	}
 
-	@GetMapping(value = "/city/{cityId}")
-	public City getcityDatabyId(@PathVariable("cityId") int id) {
+	@GetMapping(value = "/city/{id}")
+	public City getcityDatabyId(@PathVariable("id") int id) {
 		return cityService.getcityDatabyId(id);
 	}
 
-	@PutMapping(value = "/city/{cityId}")
+	@PutMapping(value = "/city")
 	public void updateCityDetails(@RequestBody City city) {
 		cityService.updateCityDetails(city);
 	}
 
-	@DeleteMapping(value = "/city/{cityId}")
-	public void deleteCity(@PathVariable("cityId") int id) {
+	@DeleteMapping(value = "/city/{id}")
+	public void deleteCity(@PathVariable("id") int id) {
 		cityService.deleteCity(id);
 	}
 

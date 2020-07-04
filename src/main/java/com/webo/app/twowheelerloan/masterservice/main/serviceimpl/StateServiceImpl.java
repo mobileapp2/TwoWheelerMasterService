@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.model.Country;
 import com.webo.app.twowheelerloan.masterservice.main.model.State;
 import com.webo.app.twowheelerloan.masterservice.main.repository.StateRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.StateService;
+import com.webo.app.twowheelerloan.masterservice.main.service.StateServiceI;
 
 @Service
-public class StateServiceImpl implements StateService{
+public class StateServiceImpl implements StateServiceI{
 @Autowired StateRepo stateRepo;
 
 @Override

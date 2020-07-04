@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeDetails;
 
-public interface EmployeeServiceInter 
+public interface EmployeeServiceI 
 {
 
 	public EmployeeDetails addEmployeeDetailsData(EmployeeDetails employeeDetails);

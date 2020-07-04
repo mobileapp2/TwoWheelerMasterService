@@ -11,13 +11,13 @@ import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.controller.EmployeeAddressDetailsController;
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeAddressDetails;
 import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeAddressDetailsRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsService;
+import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsServiceI;
 
 
 
 @Service
-@Transactional
-public class EmployeeAddressDetailServiceImpl implements EmployeeAddressDetailsService{
+//@Transactional
+public class EmployeeAddressDetailServiceImpl implements EmployeeAddressDetailsServiceI{
 
 	@Autowired EmployeeAddressDetailsRepo repo;
 

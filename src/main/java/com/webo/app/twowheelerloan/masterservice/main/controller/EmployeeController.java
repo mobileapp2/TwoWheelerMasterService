@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceInter;
+import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeServiceI;
 
 @RestController
 public class EmployeeController
 {
 	@Autowired
-	EmployeeServiceInter employeeServiceInter;
+	private EmployeeServiceI employeeServiceInter;
 	
 	@RequestMapping(value = "/employeeDetail",method = RequestMethod.POST)
 	public void addData(@RequestBody EmployeeDetails employeeDetails)

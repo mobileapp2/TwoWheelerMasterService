@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.webo.app.twowheelerloan.masterservice.main.model.BranchDetails;
 
 @Repository
-public interface RepoForBranchDetails extends JpaRepository<BranchDetails, Integer> {
+public interface BranchDetailsRepo extends JpaRepository<BranchDetails, Integer> {
 	
 	
 	
