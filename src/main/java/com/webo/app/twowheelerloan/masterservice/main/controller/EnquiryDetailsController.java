@@ -9,42 +9,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.webo.app.twowheelerloan.masterservice.main.model.EnquiryDetails;
-import com.webo.app.twowheelerloan.masterservice.main.repository.EnquiryDetailsRepository;
+import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.EnquiryDetailsServiceImpl;
 
 @RestController
 public class EnquiryDetailsController {
 
 	@Autowired
-	private EnquiryDetailsRepository enquiryDetailsRepository;
+	private EnquiryDetailsServiceImpl s;
 
 	@RequestMapping(value = "/EnquiryDetails", method = RequestMethod.POST)
 	public String saveEnquiryDetails(@RequestBody EnquiryDetails enquiryDetails) {
-		enquiryDetailsRepository.save(enquiryDetails);
+		s.saveEnquiryDetails(enquiryDetails);
 		return "EnquiryDetails saved";
 	}
 
 	@RequestMapping(value = "/EnquiryDetails/{id}", method = RequestMethod.GET)
 	public Optional<EnquiryDetails> getEnquiryDetails(@PathVariable Integer id) {
-		Optional<EnquiryDetails> enquiryDetail = enquiryDetailsRepository.findById(id);
+		Optional<EnquiryDetails> enquiryDetail = s.getEnquiryDetails(id);
 		return enquiryDetail;
 	}
 
 	@RequestMapping(value = "/EnquiryDetails", method = RequestMethod.GET)
 	public List<EnquiryDetails> getAllEnquiryDetails() {
-		List<EnquiryDetails> enquiryDetails = enquiryDetailsRepository.findAll();
+		List<EnquiryDetails> enquiryDetails = s.getAllEnquiryDetails();
 		return enquiryDetails;
 	}
 
 	@RequestMapping(value = "/EnquiryDetails/{id}", method = RequestMethod.DELETE)
 	public void deleteEnquiryDetails(@PathVariable int id) {
-		enquiryDetailsRepository.deleteById(id);
+		s.deleteEnquiryDetails(id);;
 	}
 
 	@RequestMapping(value = "/EnquiryDetails", method = RequestMethod.PUT)
-	public void updateStudent(@RequestBody EnquiryDetails enquiryDetails) {
-		enquiryDetailsRepository.saveAndFlush(enquiryDetails);
+	public void updateEnquiryDetails(@RequestBody EnquiryDetails enquiryDetails) {
+		s.updateEnquiryDetails(enquiryDetails);;
 	}
 
 }

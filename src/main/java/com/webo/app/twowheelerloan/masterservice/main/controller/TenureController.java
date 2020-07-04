@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Tenure;
-import com.webo.app.twowheelerloan.masterservice.main.service.TenureService;
+import com.webo.app.twowheelerloan.masterservice.main.service.TenureServiceI;
 
 @RestController
 public class TenureController {
 	
-	@Autowired TenureService ts;
+	@Autowired TenureServiceI ts;
 	
 	@PostMapping(value = "/addtenuredata")
 	public void adddata (@RequestBody Tenure tenure)

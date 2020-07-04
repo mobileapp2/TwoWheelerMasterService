@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Status;
-import com.webo.app.twowheelerloan.masterservice.main.service.StatusService;
+import com.webo.app.twowheelerloan.masterservice.main.service.StatusServiceI;
 
 @RestController
 public class StatusController 
 {
-	@Autowired StatusService ss;
+	@Autowired StatusServiceI ss;
 	
 	@PostMapping(value="/addstatustdata") 
 	public void adddata (@RequestBody Status status)

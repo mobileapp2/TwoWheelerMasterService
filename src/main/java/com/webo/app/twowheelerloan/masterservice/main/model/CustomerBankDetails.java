@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Customer_Bank_Details {
+public class CustomerBankDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

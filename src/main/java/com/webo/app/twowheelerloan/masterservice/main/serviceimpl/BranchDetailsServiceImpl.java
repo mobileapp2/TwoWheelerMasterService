@@ -5,14 +5,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.model.BranchDetails;
-import com.webo.app.twowheelerloan.masterservice.main.repository.RepoForBranchDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.ServiceIForBranchDetails;
+import com.webo.app.twowheelerloan.masterservice.main.repository.BranchDetailsRepo;
+import com.webo.app.twowheelerloan.masterservice.main.service.BranchDetailsServiceI;
 
 @Service
-public class ServiceImplForBranchDetails implements ServiceIForBranchDetails {
+public class BranchDetailsServiceImpl implements BranchDetailsServiceI {
 
 	@Autowired
-	RepoForBranchDetails repo;
+	BranchDetailsRepo repo;
 
 	public void insertBranchDetails(BranchDetails BranchDetails) {
 

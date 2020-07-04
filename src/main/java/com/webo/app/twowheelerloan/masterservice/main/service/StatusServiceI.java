@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Status;
 
-public interface StatusService {
+public interface StatusServiceI {
 	
 	
 	public void insertStatusData(Status status);

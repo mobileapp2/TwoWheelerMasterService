@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.ServiceImplForDealerBankDetails;
+import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.DealerBankDetailsServiceImpl;
 import com.webo.app.twowheelerloan.masterservice.main.model.DealerBankDetails;
 @RestController
 @CrossOrigin("*")
-public class Dealer_Bank_DetailsController {
+public class DealerBankDetailsController {
 	
 	@Autowired
-	ServiceImplForDealerBankDetails s ;
+	DealerBankDetailsServiceImpl s ;
 	
 	@PostMapping(value = "/dealerbank")
 	public void addData(@RequestBody DealerBankDetails DealerBankDetails) {

@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.webo.app.twowheelerloan.masterservice.main.model.City;
-import com.webo.app.twowheelerloan.masterservice.main.service.CityService;
+import com.webo.app.twowheelerloan.masterservice.main.service.CityServiceI;
 
 @RestController
 public class CityController {
 
 	@Autowired
-	CityService cityService;
+	CityServiceI cityService;
 
 	@PostMapping(value = "/city")
 	public void insertCityData(@RequestBody City city) {

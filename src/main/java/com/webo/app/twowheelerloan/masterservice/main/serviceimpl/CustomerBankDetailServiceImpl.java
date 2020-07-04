@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.CustomerBankDetail;
 import com.webo.app.twowheelerloan.masterservice.main.repository.CustomerBankDetailRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.CustomerBankDetailService;
+import com.webo.app.twowheelerloan.masterservice.main.service.CustomerBankDetailServiceI;
 
 @Service
-public class CustomerBankDetailServiceImpl implements CustomerBankDetailService {
+public class CustomerBankDetailServiceImpl implements CustomerBankDetailServiceI {
 
 	@Autowired 
 	CustomerBankDetailRepo customerBankDetailRepo;

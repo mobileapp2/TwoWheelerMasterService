@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.BranchAddressDetails;
 import com.webo.app.twowheelerloan.masterservice.main.repository.BranchAddressDetailsRepo;
-import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsI;
+import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsServiceI;
 @Service
-public class BranchAddressDetailsImpl implements BranchAddressDetailsI {
+public class BranchAddressDetailsServiceImpl implements BranchAddressDetailsServiceI {
 	@Autowired
 	
 	BranchAddressDetailsRepo re;

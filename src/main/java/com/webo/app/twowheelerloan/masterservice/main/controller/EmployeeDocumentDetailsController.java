@@ -26,7 +26,7 @@ import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeDocumentDetails;
-import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeDocumentDetailsRepository;
+import com.webo.app.twowheelerloan.masterservice.main.repository.EmployeeDocumentDetailsRepo;
 
 @SuppressWarnings("unused")
 @RestController
@@ -51,7 +51,7 @@ public class EmployeeDocumentDetailsController implements ServletContextAware {
 	
 	  
 	  private ServletContext servletContext;
-	  @Autowired private EmployeeDocumentDetailsRepository eddr;
+	  @Autowired private EmployeeDocumentDetailsRepo eddr;
 	  
 	  @RequestMapping(value = "/upload",method = RequestMethod.POST) public
 	  ResponseEntity<Void> upload(@RequestParam MultipartFile[] files){ try {

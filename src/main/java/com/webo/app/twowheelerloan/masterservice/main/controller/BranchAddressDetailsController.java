@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.BranchAddressDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsI;
-import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.BranchAddressDetailsImpl;
+import com.webo.app.twowheelerloan.masterservice.main.service.BranchAddressDetailsServiceI;
+import com.webo.app.twowheelerloan.masterservice.main.serviceimpl.BranchAddressDetailsServiceImpl;
 
 @RestController
 @CrossOrigin("")
 public class BranchAddressDetailsController {
 	@Autowired
-	BranchAddressDetailsImpl bi;
+	BranchAddressDetailsServiceImpl bi;
 	
 	@PostMapping(value = "/branchaddress")
 	public void addData(@RequestBody BranchAddressDetails branchaddressDetails)

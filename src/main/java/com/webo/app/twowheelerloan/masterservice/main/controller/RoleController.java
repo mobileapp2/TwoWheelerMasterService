@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.Role;
-import com.webo.app.twowheelerloan.masterservice.main.service.RoleServiceInter;
+import com.webo.app.twowheelerloan.masterservice.main.service.RoleServiceI;
 
 @RestController
 public class RoleController 
 {
 
 	@Autowired
-	RoleServiceInter roleServiceInter;
+	RoleServiceI roleServiceInter;
 	
 	@RequestMapping(value = "/role", method = RequestMethod.POST)
 	public void addData(@RequestBody Role role)

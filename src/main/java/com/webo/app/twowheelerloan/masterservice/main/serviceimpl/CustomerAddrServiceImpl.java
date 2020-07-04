@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.CustomerAddress;
-import com.webo.app.twowheelerloan.masterservice.main.repository.CustomerAddrRepository;
+import com.webo.app.twowheelerloan.masterservice.main.repository.CustomerAddressRepo;
 import com.webo.app.twowheelerloan.masterservice.main.service.CustomerAddrServiceI;
 
 
@@ -15,7 +15,7 @@ import com.webo.app.twowheelerloan.masterservice.main.service.CustomerAddrServic
 public class CustomerAddrServiceImpl implements CustomerAddrServiceI{
 	
 	@Autowired
-	private CustomerAddrRepository customerAddrRepository;
+	private CustomerAddressRepo customerAddrRepository;
 
 	@Override
 	public void addCustomerAddress(CustomerAddress customerAddress) {

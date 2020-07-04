@@ -5,15 +5,15 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.model.DealerBankDetails;
-import com.webo.app.twowheelerloan.masterservice.main.repository.RepoForDealerBankDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.ServiceIForDealerBankDetails;
+import com.webo.app.twowheelerloan.masterservice.main.repository.DealerBankDetailsRepo;
+import com.webo.app.twowheelerloan.masterservice.main.service.DealerBankDetailsServiceI;
 
 
 @Service
-public class ServiceImplForDealerBankDetails implements ServiceIForDealerBankDetails {
+public class DealerBankDetailsServiceImpl implements DealerBankDetailsServiceI {
 
 	@Autowired
-	RepoForDealerBankDetails repo;
+	DealerBankDetailsRepo repo;
 
 	public void insertDealerBankDetails(DealerBankDetails DealerBankDetails) {
 

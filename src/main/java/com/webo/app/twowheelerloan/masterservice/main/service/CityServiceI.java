@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.webo.app.twowheelerloan.masterservice.main.model.City;
 
 @Service
-public interface CityService {
+public interface CityServiceI {
 
 	public void insertCityData(City city);
 	public List<City> getCityData();

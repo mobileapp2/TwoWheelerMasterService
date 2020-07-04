@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.CustomerBankDetail;
 
-public interface CustomerBankDetailService {
+public interface CustomerBankDetailServiceI {
 
 	public void addCustomerBankDetailData(CustomerBankDetail CustomerBankDetail);
 

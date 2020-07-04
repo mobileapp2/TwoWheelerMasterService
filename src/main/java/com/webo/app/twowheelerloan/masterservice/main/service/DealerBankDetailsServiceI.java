@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.DealerBankDetails;
 
-public interface ServiceIForDealerBankDetails {
+public interface DealerBankDetailsServiceI {
 	
 	public void insertDealerBankDetails(DealerBankDetails addr);
 	public List<DealerBankDetails> readDealerBankDetails();

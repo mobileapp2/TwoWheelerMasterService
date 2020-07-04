@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.webo.app.twowheelerloan.masterservice.main.model.EmployeeAddressDetails;
-import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsService;
+import com.webo.app.twowheelerloan.masterservice.main.service.EmployeeAddressDetailsServiceI;
 
 
 
 @RestController
 public class EmployeeAddressDetailsController {
 
-	@Autowired EmployeeAddressDetailsService EmpAddService;
+	@Autowired EmployeeAddressDetailsServiceI EmpAddService;
 		@PostMapping(value = "/employeeaddresses")
 	public void insertEmployeeAddressDetails(@RequestBody EmployeeAddressDetails DealerBankDetails) {
 	EmpAddService.insertEmployeeAddressDetails(DealerBankDetails);
